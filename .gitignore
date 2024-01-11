@@ -1,7 +1,7 @@
 poetry.lock
 .coverage
 .venv
-README.md
+libs/*/README.md
 .python-version
 __pycache__/
 *.ipynb
