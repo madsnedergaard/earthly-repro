@@ -1,5 +1,0 @@
-isLowCarbon:
-    battery charge:
-        _comment: Charge does not have any impact (we count emissions at discharge)
-        source: Electricity Maps
-        value: 1
