@@ -1,0 +1,6 @@
+[tool.poetry]
+name = "electricitymap-flowtracing"
+version = "0.1.0"
+description = ""
+authors = ["electricity Maps <hello@electricitymaps.com>"]
+

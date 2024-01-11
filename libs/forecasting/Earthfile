@@ -1,0 +1,20 @@
+VERSION --use-visited-upfront-hash-collection 0.7
+FROM python:3.10
+WORKDIR /libs/forecasting
+
+src-files:
+  COPY ../../contrib+src-files/* /contrib
+  COPY ../../libs/config+src-files/* /libs/config
+  COPY ../../libs/db+src-files/* /libs/db
+  COPY ../../libs/logger+src-files/* /libs/logger
+  COPY ../../libs/marginal+src-files/* /libs/marginal
+  COPY ../../libs/features+src-files/* /libs/features
+  COPY ../../libs/pkg-tooling+src-files/* /libs/pkg-tooling
+  COPY ../../libs/plotting+src-files/* /libs/plotting
+  COPY electricitymap ./electricitymap
+  COPY pyproject.toml .
+  SAVE ARTIFACT .
+
+prepare:
+  FROM +src-files
+  RUN echo "prepare forecasting"

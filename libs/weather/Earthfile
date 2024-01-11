@@ -1,0 +1,16 @@
+VERSION --use-visited-upfront-hash-collection 0.7
+FROM python:3.10
+WORKDIR /libs/weather
+
+src-files:
+  COPY ../../contrib+src-files/* /contrib
+  COPY ../../libs/pkg-tooling+src-files/* /libs/pkg-tooling
+  COPY ../../libs/config+src-files/* /libs/config
+  COPY ../../libs/db+src-files/* /libs/db
+  COPY electricitymap ./electricitymap
+  COPY pyproject.toml .
+  SAVE ARTIFACT .
+
+prepare:
+  FROM +src-files
+  RUN echo "prepare weather"
