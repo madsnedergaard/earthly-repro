@@ -1,0 +1,16 @@
+poetry.lock
+.coverage
+.venv
+README.md
+.python-version
+__pycache__/
+*.ipynb
+*.py
+tests/
+!libs/*/Earthfile
+!libs/*/electricitymap/*/__init__.py
+!libs/*/electricitymap/*/test.py
+!libs/*/electricitymap/*/test2.py
+!libs/*/electricitymap/*/long_python_file.py
+libs/*/.gitignore
+poetry.toml
